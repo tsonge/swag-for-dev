@@ -129,6 +129,14 @@ window.addEventListener('DOMContentLoaded', () => {
 			selectr.setValue(search.get('tags').split(' '));
 		}
 
+		if (search.has('sort')) {
+			sortingInput.value = search.get('sort');
+		}
+		
+		if (search.has('difficulty')) {
+			filterInput.value = search.get('difficulty');
+		}
+		
 		showExpired.checked = search.get('expired') === 'true';
 	}
 
